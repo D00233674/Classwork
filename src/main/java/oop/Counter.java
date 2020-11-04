@@ -24,9 +24,10 @@ public class Counter {
 
     /**
      * click() increments the value of this counter by 1.
+     * potentially use this.count wherever mentioned
      */
     public void click() {
-        if (count <= limit) {
+        if (count < limit) {
             count = count + 1;
         } else {
             System.out.println("Limit Reached");
@@ -39,12 +40,27 @@ public class Counter {
     // the value of this counter to 0.
     // Test by calling from App start()
 
+    public void reset(){
+        count = 0;
+        System.out.println("Counter Reset!");
+    }
+
 
     //TODO
     // Implement an undo() method that will reduce the count by one.
     // Do not allow the count to become negative.
     // Print the value of count from the method after the decrement.
     // Call this undo() method from App start().
+
+    public void undo(){
+        if(count > 0){
+            count = count - 1;
+        } else {
+            System.out.println("Count is already '0'!");
+        }
+        System.out.println("Undo complete! count = " + count);
+
+    }
 
 
 
