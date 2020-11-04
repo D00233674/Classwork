@@ -23,7 +23,18 @@ public class AppTest
         assertEquals(expected, actual);
     }
 
-    //TODO add a test for Counter undo()
+    @Test
+    public void clickLimit() {
+        Counter counter = new Counter();
+        for(int i = 0; i < 15; i++){
+            counter.click();
+        }
+        int expected = 10;
+        int actual = counter.getCount();
+        assertEquals(expected, actual);
+    }
+
+    //DONE add a test for Counter undo()
 
     @Test
     public void undo() {

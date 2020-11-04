@@ -23,32 +23,41 @@ public class App
 
         myCounter.display();
 
-        //TODO - add call to reset() that you implement in Counter class
+        //DONE - add call to reset() that you implement in Counter class
 
         myCounter.reset();
 
         myCounter.display();
 
-        //TODO - add call to undo() that you implement in Counter class
+        //DONE - add call to undo() that you implement in Counter class
 
 //        myCounter.click();
         myCounter.undo();
 
-        //TODO
+        //DONE
         // Add a JUnit test method to test undo()
 
-        //TODO
+        //DONE
         // Create a second Counter object, then
         // click() it once, undo() twice, click(), then display()
         // What count do you expect? 1
 
-        System.out.println("* New Counter *");
+        System.out.println("\n* New Counter *");
         Counter myCounter2 = new Counter(10);
         myCounter2.click();
         myCounter2.undo();
         myCounter2.undo();
         myCounter2.click();
         myCounter2.display();
+
+        System.out.println("\n* Checking upper limit *");
+        myCounter2.reset();
+        myCounter2.display();
+        for(int i = 0; i < 15; i++){
+            myCounter2.click();
+            myCounter2.display();
+        }
+
 
     }
 
